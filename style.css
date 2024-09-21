@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+body{
+    font-family: "DM Sans", sans-serif;
+    background-color: rgb(245, 245, 245);
+}
+.box-container{
+    display: grid;
+    gap: 1.5rem;
+}
+.box{
+    padding: 2rem;
+}
+.social-media{
+    background-color: rgb(118, 81, 220);
+    color: white;
+    text-align: center;
+}
+
+
+.social-media h1{
+    font-size: 2.75rem;
+    margin-top: 0;    
+}
+
+.social-media span{
+    color: rgb(251, 207, 119);
+}
+
+img{
+    width: 100%;
+    max-width: 300px;
+}
+.social-media img{
+    margin-bottom: 1rem;
+}
+
+.multiple-platforms{
+    background-color: rgb(254, 254, 254);
+}
+p{
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.consistent-schedule{
+    background-color: rgb(255, 204, 105);
+    padding: 2rem 2rem 0 2rem ;
+}
+
+.schedule-post{
+    background-color: rgb(220, 209, 252);
+    text-align: center;
+}
+
+.schedule-post img + p{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.grow-followers{
+    background-color: rgb(118, 81, 220);
+    text-align: center;
+}
+
+.grow-followers h1{
+    color: white;
+}
+.audience-growth {
+    background-color: #fff;
+}
+.audience-growth p{
+    font-size: 1rem;
+    font-weight: normal;
+}
+.create-post{
+    background-color: rgb(250, 238, 226);
+}
+.create-post img,
+.consistent-schedule img,
+.ai-content img{
+    width: 100%;
+    max-width: 200px;
+}
+.create-post span{
+    color: rgb(114, 81, 192);
+}
+.ai-content{
+    background-color: rgb(255, 204, 105);
+}
+
+@media (width > 425px) {
+    .box-container{
+        grid-template-rows: 1fr 0.25fr 0.5fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'create-post social-media social-media schedule-post'
+        'create-post multiple-platforms consistent-schedule schedule-post'
+        'ai-content multiple-platforms consistent-schedule schedule-post'
+        'ai-content audience-growth grow-followers grow-followers'
+        ;
+    }
+    *{
+        font-size: 1.5rem;
+        padding: 0;
+    }
+    .create-post{
+        grid-area: create-post;
+    }
+    .social-media{
+        grid-area: social-media;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-media span{
+        font-size: 2.75rem;
+    }
+
+    .schedule-post{
+        grid-area: schedule-post;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        
+    }
+    .schedule-post img{
+        width: 712px;
+        margin-bottom: 4rem;
+    }
+    .schedule-post img + p{
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    .multiple-platforms{
+        grid-area: multiple-platforms;
+     }
+    .consistent-schedule{
+        grid-area: consistent-schedule;
+        max-height: 350px;
+        overflow: hidden;
+    }
+    .ai-content{
+        grid-area: ai-content;
+    }
+    .audience-growth{
+        grid-area: audience-growth;
+    }
+    .grow-followers{
+        grid-area: grow-followers;
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+
